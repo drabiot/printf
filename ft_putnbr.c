@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 
 /* ft_divide()
- * Transform an integer in a string.
+ * Transform an integer into a string.
  * Count & return the size of the integer.
  */
 
@@ -35,7 +35,7 @@ static int	ft_divide(int nb)
 }
 
 /* ft_putnbr()
- * Chek if the integer "nb" is negative & execute divide function.
+ * Chek if the given integer is negative & execute divide() function.
  */
 
 int	ft_putnbr(int nb)

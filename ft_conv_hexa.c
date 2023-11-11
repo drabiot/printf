@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 
 /* ft_conv_hexa()
- * Convert a base 10 unsigned int "nb" to an Hexadecimal.
+ * Convert a base 10 unsigned int to its Hexadecimal base.
  * Wich is Uppercase Hexadecimal or Lowecase Hexadecimal.
  */
 
@@ -30,7 +30,7 @@ static void	ft_conv_hexa(unsigned int nb, char type, int *count)
 }
 
 /* ft_base_conv()
- * Take a base 10 int "nb" to be converted by conv_hexa function.
+ * Take a base 10 integer to be converted by conv_hexa() function.
  * Count the length of the futur Hexadecimal number.
  */
 

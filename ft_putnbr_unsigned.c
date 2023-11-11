@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 
 /* ft_putnbr_unsigned()
- * Transform an unsigned int in a string.
+ * Transform an unsigned int into a string.
  * Count & return the size of the unsigned int.
  */
 

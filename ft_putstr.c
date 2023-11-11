@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 
 /* ft_putstr()
- * return the size of the given string "str".
+ * Return the size of the given string.
  */
 
 int	ft_putstr(char *str)

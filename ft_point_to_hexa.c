@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 
 /* ft_conv_hexa()
- * Convert a base 10 address to his Lowercase Hexadecimal base.
+ * Convert a base 10 address to its Lowercase Hexadecimal base.
  */
 
 static void	ft_conv_hexa(unsigned long long nb, int *count)
@@ -26,7 +26,7 @@ static void	ft_conv_hexa(unsigned long long nb, int *count)
 }
 
 /* ft_bse_conv()
- * Take an address to be converted by conv_hexa function.
+ * Take an address to be converted by conv_hexa() function.
  * Add string "0x" before writting the address.
  * Count the length of the futur Hexadecimal base address.
  */

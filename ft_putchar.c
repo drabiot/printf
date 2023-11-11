@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 
 /* ft_putchar()
- * return the size of the given char "c".
+ * Return the size of the given character.
  */
 
 int	ft_putchar(int c)
