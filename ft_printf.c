@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 
 /* ft_arguments()
- * look at the arguments put after the '%' in the ft_printf const char.
+ * Look at the arguments put after the '%' in the ft_printf() string.
  */
 
 static int	ft_arguments(const char c, va_list array, int count)
@@ -33,18 +33,15 @@ static int	ft_arguments(const char c, va_list array, int count)
 	else if (c == 'x' || c == 'X')
 		count += ft_base_conv(va_arg(array, int), c);
 	else if (c == '%')
-	{
-		count++;
-		write (1, "%", 1);
-	}
+		count += ft_putchar('%');
 	return (count);
 }
 
-/* ft_valid_input()
- * checks if the given arguments are good
+/* ft_valid_arg()
+ * checks if the given arguments are correct.
  */
 
-static int	ft_valid_input(const char *s, int i)
+static int	ft_valid_arg(const char *s, int i)
 {
 	return (s[i] == '%' && (s[i + 1] == 'c' || s[i + 1] == 's'
 			|| s[i + 1] == 'p' || s[i + 1] == 'd' || s[i + 1] == 'i'
@@ -53,7 +50,7 @@ static int	ft_valid_input(const char *s, int i)
 }
 
 /* ft_printf()
- * Read the string "s" & check for specific given arguments
+ * Read the given string & check out for specific given arguments
  * which start with '%'. Count the size of the final string and return it.
  */
 
@@ -63,12 +60,14 @@ int	ft_printf(const char *s, ...)
 	int		i;
 	int		count;
 
+	if (!s)
+		return (0);
 	va_start(array, s);
 	i = 0;
 	count = 0;
 	while (s[i])
 	{
-		if (ft_valid_input(s, i))
+		if (ft_valid_arg(s, i))
 		{
 			count = ft_arguments(s[i + 1], array, count);
 			i += 2;
